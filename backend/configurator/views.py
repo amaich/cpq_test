@@ -1,21 +1,35 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .services.graph import ItemGraph
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+
+from .utils.graph import ItemGraph
 from .models import Item, Product
 import logging
 
 logging.getLogger(__name__)
 
 def index(request):
-    graph = ItemGraph()
+
 
     product = Product.objects.first()
 
-    for item in Item.objects.filter(product=product):
-        graph.add_node(item.name)
-        for sub_item in item.items.all():
-            graph.add_edge(item.name, sub_item.name)
+    graph = ItemGraph(Item.objects.filter(product=product))
 
-    graph.dfs("Полочка")
+    logging.info(graph.nodes)
 
-    return HttpResponse("daji")
+    return_str = ""
+
+    builded_graph = graph.pretty_dfs(Item.objects.get(name='Полочка'))
+    logging.info(f"----------{builded_graph}")
+    return_str += "<p>--------</p>"
+    return_str += builded_graph
+    return HttpResponse(return_str)
+
+
+class CreateItemView(APIView):
+    def post(self, request):
+
+        return Response

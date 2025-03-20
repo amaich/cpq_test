@@ -428,3 +428,871 @@ ValueError: Field 'id' expected a number but got ''.
 2025-03-18 15:33:05,391 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-03-18 15:36:04,153 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
 2025-03-18 15:36:04,353 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:01:38,036 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:06:35,438 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:07:36,718 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-19 14:07:37,062 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:09:07,473 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-19 14:09:07,659 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:10:00,944 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-19 14:10:01,124 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:14:19,707 django.request WARNING  Not Found: /favicon.ico
+2025-03-19 14:14:23,232 django.request ERROR    Internal Server Error: /admin/configurator/condition/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column configurator_condition.condition does not exist
+LINE 1: ...n"."name", "configurator_condition"."product_id", "configura...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2138, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column configurator_condition.condition does not exist
+LINE 1: ...n"."name", "configurator_condition"."product_id", "configura...
+                                                             ^
+
+2025-03-19 14:15:25,531 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-19 14:15:25,724 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:15:42,447 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:25:27,756 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:27:03,411 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:28:10,891 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:51:29,502 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-19 14:51:29,898 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:53:51,978 root         INFO     ---Полочка added
+2025-03-19 14:53:51,979 root         INFO     ---Стачивание added
+2025-03-19 14:53:51,980 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:53:51,981 root         INFO     ---С кокеткой added
+2025-03-19 14:53:51,981 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:53:51,981 root         INFO     Полочка
+2025-03-19 14:55:02,824 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 14:55:03,012 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:55:10,134 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 14:55:10,346 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:55:13,464 root         INFO     ---Полочка added
+2025-03-19 14:55:13,465 root         INFO     ---Стачивание added
+2025-03-19 14:55:13,466 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:55:13,467 root         INFO     ---С кокеткой added
+2025-03-19 14:56:08,720 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 14:56:08,921 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:56:10,587 root         INFO     ---Полочка added
+2025-03-19 14:56:10,588 root         INFO     ---Стачивание added
+2025-03-19 14:56:10,588 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:56:10,589 root         INFO     ---С кокеткой added
+2025-03-19 14:56:10,590 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:56:46,188 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 14:56:46,386 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:56:59,046 root         INFO     ---Полочка added
+2025-03-19 14:56:59,047 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:56:59,047 root         INFO     ---Стачивание added
+2025-03-19 14:56:59,048 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:56:59,049 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:56:59,049 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:56:59,049 root         INFO     ---С кокеткой added
+2025-03-19 14:56:59,050 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:47,746 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 14:57:47,940 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:57:48,714 root         INFO     ---Полочка added
+2025-03-19 14:57:48,715 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:48,715 root         INFO     ---Стачивание added
+2025-03-19 14:57:48,716 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:48,716 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:48,716 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:48,717 root         INFO     ---С кокеткой added
+2025-03-19 14:57:48,717 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:50,537 root         INFO     ---Полочка added
+2025-03-19 14:57:50,538 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:50,538 root         INFO     ---Стачивание added
+2025-03-19 14:57:50,539 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:50,540 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:50,540 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:50,540 root         INFO     ---С кокеткой added
+2025-03-19 14:57:50,541 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:52,023 root         INFO     ---Полочка added
+2025-03-19 14:57:52,025 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:52,025 root         INFO     ---Стачивание added
+2025-03-19 14:57:52,026 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:52,027 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:52,027 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:52,027 root         INFO     ---С кокеткой added
+2025-03-19 14:57:52,028 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:52,624 root         INFO     ---Полочка added
+2025-03-19 14:57:52,625 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:52,625 root         INFO     ---Стачивание added
+2025-03-19 14:57:52,626 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:52,627 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:52,627 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:52,628 root         INFO     ---С кокеткой added
+2025-03-19 14:57:52,628 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:52,957 root         INFO     ---Полочка added
+2025-03-19 14:57:52,958 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:52,958 root         INFO     ---Стачивание added
+2025-03-19 14:57:52,959 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:52,960 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:52,960 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:52,960 root         INFO     ---С кокеткой added
+2025-03-19 14:57:52,961 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:53,250 root         INFO     ---Полочка added
+2025-03-19 14:57:53,251 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:53,251 root         INFO     ---Стачивание added
+2025-03-19 14:57:53,252 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:53,253 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:53,253 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:53,253 root         INFO     ---С кокеткой added
+2025-03-19 14:57:53,254 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:53,614 root         INFO     ---Полочка added
+2025-03-19 14:57:53,615 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:53,615 root         INFO     ---Стачивание added
+2025-03-19 14:57:53,616 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:53,617 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:53,617 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:53,618 root         INFO     ---С кокеткой added
+2025-03-19 14:57:53,618 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:53,876 root         INFO     ---Полочка added
+2025-03-19 14:57:53,877 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:53,877 root         INFO     ---Стачивание added
+2025-03-19 14:57:53,878 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:53,879 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:53,879 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:53,880 root         INFO     ---С кокеткой added
+2025-03-19 14:57:53,880 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:54,107 root         INFO     ---Полочка added
+2025-03-19 14:57:54,109 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:54,109 root         INFO     ---Стачивание added
+2025-03-19 14:57:54,110 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:54,111 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:54,111 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:54,112 root         INFO     ---С кокеткой added
+2025-03-19 14:57:54,112 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:54,341 root         INFO     ---Полочка added
+2025-03-19 14:57:54,342 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:54,342 root         INFO     ---Стачивание added
+2025-03-19 14:57:54,344 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:54,344 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:54,344 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:54,345 root         INFO     ---С кокеткой added
+2025-03-19 14:57:54,346 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:57:54,546 root         INFO     ---Полочка added
+2025-03-19 14:57:54,547 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:57:54,548 root         INFO     ---Стачивание added
+2025-03-19 14:57:54,549 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:57:54,549 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:57:54,549 root         INFO     ---С рельефом (женская) added
+2025-03-19 14:57:54,550 root         INFO     ---С кокеткой added
+2025-03-19 14:57:54,550 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:59:11,361 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 14:59:11,552 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:59:12,488 root         INFO     ---subitem: Изделие Стачивание от Куртка
+2025-03-19 14:59:12,490 root         INFO     ---subitem: Изделие С рельефом (женская) от Куртка
+2025-03-19 14:59:12,490 root         INFO     ---subitem: Изделие С кокеткой от Куртка
+2025-03-19 14:59:12,491 root         INFO     {'Полочка': [], 'Стачивание': [], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 14:59:22,709 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 14:59:22,919 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:00:56,357 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:00:56,555 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:00:56,992 root         INFO     {'Полочка': ['Стачивание'], 'Стачивание': ['С рельефом (женская)', 'С кокеткой'], 'С рельефом (женская)': [], 'С кокеткой': []}
+2025-03-19 15:02:13,960 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:02:14,160 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:03:12,483 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:03:12,738 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:03:13,802 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:03:13,989 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:03:19,050 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:03:19,252 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:03:22,311 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:03:22,516 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:04:38,799 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:04:38,989 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:04:40,354 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 14, in index
+    graph = ItemGraph(Item.objects.filter(product=product))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/services/graph.py", line 8, in __init__
+    self.add_node(node)
+  File "/app/configurator/services/graph.py", line 14, in add_node
+    if node not in self.nodes:
+                   ^^^^^^^^^^
+AttributeError: 'ItemGraph' object has no attribute 'nodes'
+2025-03-19 15:04:41,842 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 14, in index
+    graph = ItemGraph(Item.objects.filter(product=product))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/services/graph.py", line 8, in __init__
+    self.add_node(node)
+  File "/app/configurator/services/graph.py", line 14, in add_node
+    if node not in self.nodes:
+                   ^^^^^^^^^^
+AttributeError: 'ItemGraph' object has no attribute 'nodes'
+2025-03-19 15:05:00,192 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-19 15:05:00,381 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:05:06,392 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:06:46,906 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:06:47,099 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:06:48,154 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:06:49,778 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:07:12,301 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:07:12,494 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:07:13,407 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:07:27,668 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:07:27,879 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:07:28,475 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:07:49,055 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:07:49,249 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:07:51,059 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:08:05,436 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:08:05,627 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:08:06,620 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:08:23,804 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:08:23,995 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:08:25,356 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:17:33,410 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-19 15:17:33,606 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:17:35,341 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [], <Item: Изделие С кокеткой от Куртка>: []}
+2025-03-19 15:19:59,593 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 09:29:02,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:29:46,944 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:31:09,052 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:43:01,798 root         INFO     {}
+2025-03-20 10:45:53,572 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:47:13,127 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 10:47:13,331 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:48:15,686 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 10:48:15,896 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:48:17,658 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:17,670 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:17,670 root         INFO     полочка
+2025-03-20 10:48:17,695 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 23, in index
+    graph.dfs('полочка')
+  File "/app/configurator/services/graph.py", line 31, in dfs
+    for neighbor in self.nodes[start]:
+                    ~~~~~~~~~~^^^^^^^
+KeyError: 'полочка'
+2025-03-20 10:48:32,089 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 10:48:32,297 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:48:35,275 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:35,287 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:35,288 root         INFO     Полочка
+2025-03-20 10:48:35,303 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 23, in index
+    graph.dfs('Полочка')
+  File "/app/configurator/services/graph.py", line 31, in dfs
+    for neighbor in self.nodes[start]:
+                    ~~~~~~~~~~^^^^^^^
+KeyError: 'Полочка'
+2025-03-20 10:48:36,234 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:36,249 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:36,250 root         INFO     Полочка
+2025-03-20 10:48:36,268 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 23, in index
+    graph.dfs('Полочка')
+  File "/app/configurator/services/graph.py", line 31, in dfs
+    for neighbor in self.nodes[start]:
+                    ~~~~~~~~~~^^^^^^^
+KeyError: 'Полочка'
+2025-03-20 10:48:36,833 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:36,849 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:36,849 root         INFO     Полочка
+2025-03-20 10:48:36,868 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 23, in index
+    graph.dfs('Полочка')
+  File "/app/configurator/services/graph.py", line 31, in dfs
+    for neighbor in self.nodes[start]:
+                    ~~~~~~~~~~^^^^^^^
+KeyError: 'Полочка'
+2025-03-20 10:48:37,385 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:37,397 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:48:37,397 root         INFO     Полочка
+2025-03-20 10:48:37,412 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 23, in index
+    graph.dfs('Полочка')
+  File "/app/configurator/services/graph.py", line 31, in dfs
+    for neighbor in self.nodes[start]:
+                    ~~~~~~~~~~^^^^^^^
+KeyError: 'Полочка'
+2025-03-20 10:48:54,495 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 10:48:54,699 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:51:50,521 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 10:51:50,711 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:51:51,810 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:04,926 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 10:52:05,110 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:52:24,273 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 10:52:24,463 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:52:24,938 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,953 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,953 root         INFO     Изделие Полочка от Куртка
+2025-03-20 10:52:24,953 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,953 root         INFO     Изделие Стачивание от Куртка
+2025-03-20 10:52:24,953 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,954 root         INFO     Изделие С рельефом (женская) от Куртка
+2025-03-20 10:52:24,954 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,954 root         INFO     Изделие Втачка от Куртка
+2025-03-20 10:52:24,954 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,954 root         INFO     Изделие Отделка от Куртка
+2025-03-20 10:52:24,954 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,954 root         INFO     Изделие С кокеткой от Куртка
+2025-03-20 10:52:24,954 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,955 root         INFO     Изделие Притачать от Куртка
+2025-03-20 10:52:24,955 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,955 root         INFO     Изделие Отделка от Куртка
+2025-03-20 10:52:24,955 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,955 root         INFO     Изделие Наличие утеплителя от Куртка
+2025-03-20 10:52:24,955 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,955 root         INFO     Изделие Настрочить утеплитель на полочку по кругу от Куртка
+2025-03-20 10:52:24,955 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:24,955 root         INFO     Изделие Притачивание ветрозащитной ткани от Куртка
+2025-03-20 10:52:26,387 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,401 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,401 root         INFO     Изделие Полочка от Куртка
+2025-03-20 10:52:26,402 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,402 root         INFO     Изделие Стачивание от Куртка
+2025-03-20 10:52:26,402 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,402 root         INFO     Изделие С рельефом (женская) от Куртка
+2025-03-20 10:52:26,402 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,402 root         INFO     Изделие Втачка от Куртка
+2025-03-20 10:52:26,402 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,403 root         INFO     Изделие Отделка от Куртка
+2025-03-20 10:52:26,403 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,403 root         INFO     Изделие С кокеткой от Куртка
+2025-03-20 10:52:26,403 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,403 root         INFO     Изделие Притачать от Куртка
+2025-03-20 10:52:26,403 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,403 root         INFO     Изделие Отделка от Куртка
+2025-03-20 10:52:26,403 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,403 root         INFO     Изделие Наличие утеплителя от Куртка
+2025-03-20 10:52:26,404 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,404 root         INFO     Изделие Настрочить утеплитель на полочку по кругу от Куртка
+2025-03-20 10:52:26,404 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:52:26,404 root         INFO     Изделие Притачивание ветрозащитной ткани от Куртка
+2025-03-20 10:53:24,812 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 10:53:25,008 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:53:29,944 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:53:29,983 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 24, in index
+    graph.pretty_dfs(Item.objects.get(name='Полочка'))
+  File "/app/configurator/services/graph.py", line 41, in pretty_dfs
+    logging.info('***' * level + start)
+                 ~~~~~~~~~~~~~~^~~~~~~
+TypeError: can only concatenate str (not "Item") to str
+2025-03-20 10:53:43,204 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 10:53:43,415 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:53:44,232 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:53:44,246 root         INFO     Полочка
+2025-03-20 10:53:44,246 root         INFO     ***Стачивание
+2025-03-20 10:53:44,246 root         INFO     ******С рельефом (женская)
+2025-03-20 10:53:44,246 root         INFO     *********Втачка
+2025-03-20 10:53:44,246 root         INFO     *********Отделка
+2025-03-20 10:53:44,246 root         INFO     ******С кокеткой
+2025-03-20 10:53:44,246 root         INFO     *********Притачать
+2025-03-20 10:53:44,246 root         INFO     *********Отделка
+2025-03-20 10:53:44,246 root         INFO     ***Наличие утеплителя
+2025-03-20 10:53:44,246 root         INFO     ******Настрочить утеплитель на полочку по кругу
+2025-03-20 10:53:44,246 root         INFO     ******Притачивание ветрозащитной ткани
+2025-03-20 10:54:01,591 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 10:54:01,789 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:54:04,097 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:54:04,111 root         INFO     Полочка
+2025-03-20 10:54:04,111 root         INFO     ---Стачивание
+2025-03-20 10:54:04,112 root         INFO     ------С рельефом (женская)
+2025-03-20 10:54:04,112 root         INFO     ---------Втачка
+2025-03-20 10:54:04,112 root         INFO     ---------Отделка
+2025-03-20 10:54:04,112 root         INFO     ------С кокеткой
+2025-03-20 10:54:04,112 root         INFO     ---------Притачать
+2025-03-20 10:54:04,112 root         INFO     ---------Отделка
+2025-03-20 10:54:04,112 root         INFO     ---Наличие утеплителя
+2025-03-20 10:54:04,112 root         INFO     ------Настрочить утеплитель на полочку по кругу
+2025-03-20 10:54:04,112 root         INFO     ------Притачивание ветрозащитной ткани
+2025-03-20 10:54:09,940 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 10:54:10,155 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:54:10,429 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:54:10,442 root         INFO     Полочка
+2025-03-20 10:54:10,442 root         INFO     -Стачивание
+2025-03-20 10:54:10,442 root         INFO     --С рельефом (женская)
+2025-03-20 10:54:10,443 root         INFO     ---Втачка
+2025-03-20 10:54:10,443 root         INFO     ---Отделка
+2025-03-20 10:54:10,443 root         INFO     --С кокеткой
+2025-03-20 10:54:10,443 root         INFO     ---Притачать
+2025-03-20 10:54:10,443 root         INFO     ---Отделка
+2025-03-20 10:54:10,443 root         INFO     -Наличие утеплителя
+2025-03-20 10:54:10,443 root         INFO     --Настрочить утеплитель на полочку по кругу
+2025-03-20 10:54:10,443 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 10:55:12,498 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 10:55:12,700 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 10:55:13,674 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом (женская) от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом (женская) от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель на полочку по кругу от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 10:55:13,691 root         INFO     Полочка
+2025-03-20 10:55:13,691 root         INFO     -Стачивание
+2025-03-20 10:55:13,692 root         INFO     --С рельефом (женская)
+2025-03-20 10:55:13,692 root         INFO     ---Втачка
+2025-03-20 10:55:13,692 root         INFO     ---Отделка
+2025-03-20 10:55:13,692 root         INFO     --С кокеткой
+2025-03-20 10:55:13,692 root         INFO     ---Притачать
+2025-03-20 10:55:13,692 root         INFO     ---Отделка
+2025-03-20 10:55:13,692 root         INFO     -Наличие утеплителя
+2025-03-20 10:55:13,692 root         INFO     --Настрочить утеплитель на полочку по кругу
+2025-03-20 10:55:13,692 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 11:22:19,370 django.utils.autoreload INFO     /app/configurator/services/graph.py changed, reloading.
+2025-03-20 11:22:19,596 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:24:23,185 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:24:23,383 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:41:24,342 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:41:24,534 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:41:28,672 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:41:28,847 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:41:34,992 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:41:35,166 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:41:58,361 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:41:58,536 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:08,695 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:08,867 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:17,017 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:17,198 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:21,335 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:21,514 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:27,658 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:27,846 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:35,998 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:36,195 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:42,339 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:42,517 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:42:48,660 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:42:48,837 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:43:11,029 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:43:11,213 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:43:15,350 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:43:15,530 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:43:23,678 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:43:23,904 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:43:32,056 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:43:32,261 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:43:42,419 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:43:42,597 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:43:58,770 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:43:58,947 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:44:07,097 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:44:07,277 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:44:31,477 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:44:31,657 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:45:02,875 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:45:03,054 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:45:07,178 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:45:07,362 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:46:07,676 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:46:07,856 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:47:54,350 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:47:54,552 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:53:31,990 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 11:53:32,176 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:53:56,377 django.utils.autoreload INFO     /app/configurator/utils/choices.py changed, reloading.
+2025-03-20 11:53:56,559 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:55:22,982 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 11:55:23,176 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 11:58:49,329 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:36:24,936 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:37:22,259 django.utils.autoreload INFO     /app/configurator/admin.py changed, reloading.
+2025-03-20 12:37:22,550 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:39:46,126 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 12:39:46,138 root         INFO     Полочка
+2025-03-20 12:39:46,138 root         INFO     -Стачивание
+2025-03-20 12:39:46,138 root         INFO     --С кокеткой
+2025-03-20 12:39:46,138 root         INFO     ---Втачка
+2025-03-20 12:39:46,138 root         INFO     ---Отделка
+2025-03-20 12:39:46,138 root         INFO     --С рельефом
+2025-03-20 12:39:46,138 root         INFO     -Наличие утеплителя
+2025-03-20 12:39:46,138 root         INFO     --Настрочить утеплитель
+2025-03-20 12:39:46,138 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:40:31,515 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:40:31,531 root         INFO     Полочка
+2025-03-20 12:40:31,531 root         INFO     -Стачивание
+2025-03-20 12:40:31,532 root         INFO     --С кокеткой
+2025-03-20 12:40:31,532 root         INFO     ---Втачка
+2025-03-20 12:40:31,532 root         INFO     ---Отделка
+2025-03-20 12:40:31,532 root         INFO     --С рельефом
+2025-03-20 12:40:31,532 root         INFO     ---Втачка
+2025-03-20 12:40:31,532 root         INFO     ---Отделка
+2025-03-20 12:40:31,532 root         INFO     -Наличие утеплителя
+2025-03-20 12:40:31,532 root         INFO     --Настрочить утеплитель
+2025-03-20 12:40:31,533 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:43:26,080 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:43:26,323 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:43:27,109 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:43:27,123 root         INFO     Полочка
+2025-03-20 12:43:27,123 root         INFO     -Стачивание
+2025-03-20 12:43:27,123 root         INFO     --С кокеткой
+2025-03-20 12:43:27,123 root         INFO     ---Втачка
+2025-03-20 12:43:27,123 root         INFO     ---Отделка
+2025-03-20 12:43:27,124 root         INFO     --С рельефом
+2025-03-20 12:43:27,124 root         INFO     ---Втачка
+2025-03-20 12:43:27,124 root         INFO     ---Отделка
+2025-03-20 12:43:27,124 root         INFO     -Наличие утеплителя
+2025-03-20 12:43:27,124 root         INFO     --Настрочить утеплитель
+2025-03-20 12:43:27,124 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:43:45,505 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 12:43:45,722 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:43:46,546 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:43:46,560 root         INFO     Полочка
+2025-03-20 12:43:46,561 root         INFO     -Стачивание
+2025-03-20 12:43:46,561 root         INFO     --С кокеткой
+2025-03-20 12:43:46,561 root         INFO     ---Втачка
+2025-03-20 12:43:46,561 root         INFO     ---Отделка
+2025-03-20 12:43:46,561 root         INFO     --С рельефом
+2025-03-20 12:43:46,561 root         INFO     ---Втачка
+2025-03-20 12:43:46,561 root         INFO     ---Отделка
+2025-03-20 12:43:46,561 root         INFO     -Наличие утеплителя
+2025-03-20 12:43:46,561 root         INFO     --Настрочить утеплитель
+2025-03-20 12:43:46,561 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:43:46,561 root         INFO     ----------<p>Полочка</p>
+2025-03-20 12:43:48,383 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:43:48,399 root         INFO     Полочка
+2025-03-20 12:43:48,399 root         INFO     -Стачивание
+2025-03-20 12:43:48,399 root         INFO     --С кокеткой
+2025-03-20 12:43:48,399 root         INFO     ---Втачка
+2025-03-20 12:43:48,400 root         INFO     ---Отделка
+2025-03-20 12:43:48,400 root         INFO     --С рельефом
+2025-03-20 12:43:48,400 root         INFO     ---Втачка
+2025-03-20 12:43:48,400 root         INFO     ---Отделка
+2025-03-20 12:43:48,400 root         INFO     -Наличие утеплителя
+2025-03-20 12:43:48,400 root         INFO     --Настрочить утеплитель
+2025-03-20 12:43:48,400 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:43:48,400 root         INFO     ----------<p>Полочка</p>
+2025-03-20 12:44:27,984 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:44:28,195 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:44:28,649 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:44:28,664 root         INFO     Полочка
+2025-03-20 12:44:28,664 root         INFO     -Стачивание
+2025-03-20 12:44:28,664 root         INFO     --С кокеткой
+2025-03-20 12:44:28,664 root         INFO     ---Втачка
+2025-03-20 12:44:28,664 root         INFO     ---Отделка
+2025-03-20 12:44:28,664 root         INFO     --С рельефом
+2025-03-20 12:44:28,665 root         INFO     ---Втачка
+2025-03-20 12:44:28,665 root         INFO     ---Отделка
+2025-03-20 12:44:28,665 root         INFO     -Наличие утеплителя
+2025-03-20 12:44:28,665 root         INFO     --Настрочить утеплитель
+2025-03-20 12:44:28,665 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:44:28,665 root         INFO     ----------<p>Полочка</p>
+2025-03-20 12:44:29,536 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:44:29,550 root         INFO     Полочка
+2025-03-20 12:44:29,550 root         INFO     -Стачивание
+2025-03-20 12:44:29,550 root         INFO     --С кокеткой
+2025-03-20 12:44:29,550 root         INFO     ---Втачка
+2025-03-20 12:44:29,550 root         INFO     ---Отделка
+2025-03-20 12:44:29,550 root         INFO     --С рельефом
+2025-03-20 12:44:29,551 root         INFO     ---Втачка
+2025-03-20 12:44:29,551 root         INFO     ---Отделка
+2025-03-20 12:44:29,551 root         INFO     -Наличие утеплителя
+2025-03-20 12:44:29,551 root         INFO     --Настрочить утеплитель
+2025-03-20 12:44:29,551 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:44:29,551 root         INFO     ----------<p>Полочка</p>
+2025-03-20 12:44:39,351 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:44:39,586 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:52:31,406 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:52:31,621 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:52:32,872 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:52:32,909 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/views.py", line 24, in index
+    logging.info(f"----------{graph.pretty_dfs(Item.objects.get(name='Полочка'))}")
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/configurator/utils/graph.py", line 40, in pretty_dfs
+    result += [f"<p>{'-' * level + start.name}</p>"]
+TypeError: can only concatenate str (not "list") to str
+2025-03-20 12:52:42,784 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:52:42,989 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:52:52,122 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:52:52,324 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:52:52,923 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:52:52,938 root         INFO     Полочка
+2025-03-20 12:52:52,938 root         INFO     -Стачивание
+2025-03-20 12:52:52,938 root         INFO     --С кокеткой
+2025-03-20 12:52:52,938 root         INFO     ---Втачка
+2025-03-20 12:52:52,938 root         INFO     ---Отделка
+2025-03-20 12:52:52,938 root         INFO     --С рельефом
+2025-03-20 12:52:52,938 root         INFO     ---Втачка
+2025-03-20 12:52:52,939 root         INFO     ---Отделка
+2025-03-20 12:52:52,939 root         INFO     -Наличие утеплителя
+2025-03-20 12:52:52,939 root         INFO     --Настрочить утеплитель
+2025-03-20 12:52:52,939 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:52:52,939 root         INFO     ----------['<p>Полочка</p>', ['<p>-Стачивание</p>', ['<p>--С кокеткой</p>', ['<p>---Втачка</p>'], ['<p>---Отделка</p>']], ['<p>--С рельефом</p>', ['<p>---Втачка</p>'], ['<p>---Отделка</p>']]], ['<p>-Наличие утеплителя</p>', ['<p>--Настрочить утеплитель</p>'], ['<p>--Притачивание ветрозащитной ткани</p>']]]
+2025-03-20 12:53:12,500 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 12:53:12,695 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:53:22,362 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:53:22,376 root         INFO     Полочка
+2025-03-20 12:53:22,376 root         INFO     -Стачивание
+2025-03-20 12:53:22,377 root         INFO     --С кокеткой
+2025-03-20 12:53:22,377 root         INFO     ---Втачка
+2025-03-20 12:53:22,377 root         INFO     ---Отделка
+2025-03-20 12:53:22,377 root         INFO     --С рельефом
+2025-03-20 12:53:22,377 root         INFO     ---Втачка
+2025-03-20 12:53:22,377 root         INFO     ---Отделка
+2025-03-20 12:53:22,377 root         INFO     -Наличие утеплителя
+2025-03-20 12:53:22,377 root         INFO     --Настрочить утеплитель
+2025-03-20 12:53:22,377 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:53:22,377 root         INFO     ----------<p>Полочка</p><p>-Стачивание</p><p>--С кокеткой</p><p>---Втачка</p><p>---Отделка</p><p>--С рельефом</p><p>---Втачка</p><p>---Отделка</p><p>-Наличие утеплителя</p><p>--Настрочить утеплитель</p><p>--Притачивание ветрозащитной ткани</p>
+2025-03-20 12:54:30,087 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 12:54:30,292 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:54:31,092 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:54:31,106 root         INFO     Полочка
+2025-03-20 12:54:31,106 root         INFO     -Стачивание
+2025-03-20 12:54:31,106 root         INFO     --С кокеткой
+2025-03-20 12:54:31,106 root         INFO     ---Втачка
+2025-03-20 12:54:31,106 root         INFO     ---Отделка
+2025-03-20 12:54:31,106 root         INFO     --С рельефом
+2025-03-20 12:54:31,107 root         INFO     ---Втачка
+2025-03-20 12:54:31,107 root         INFO     ---Отделка
+2025-03-20 12:54:31,107 root         INFO     -Наличие утеплителя
+2025-03-20 12:54:31,107 root         INFO     --Настрочить утеплитель
+2025-03-20 12:54:31,107 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:54:31,107 root         INFO     ----------<p>Полочка</p><p>-Стачивание</p><p>--С кокеткой</p><p>---Втачка</p><p>---Отделка</p><p>--С рельефом</p><p>---Втачка</p><p>---Отделка</p><p>-Наличие утеплителя</p><p>--Настрочить утеплитель</p><p>--Притачивание ветрозащитной ткани</p>
+2025-03-20 12:55:02,516 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 12:55:02,710 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:55:04,022 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С кокеткой от Куртка>, <Item: Изделие С рельефом от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: [], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 12:55:04,032 root         INFO     Полочка
+2025-03-20 12:55:04,032 root         INFO     -Стачивание
+2025-03-20 12:55:04,032 root         INFO     --С кокеткой
+2025-03-20 12:55:04,032 root         INFO     ---Втачка
+2025-03-20 12:55:04,032 root         INFO     ---Отделка
+2025-03-20 12:55:04,032 root         INFO     --С рельефом
+2025-03-20 12:55:04,032 root         INFO     ---Втачка
+2025-03-20 12:55:04,032 root         INFO     ---Отделка
+2025-03-20 12:55:04,032 root         INFO     -Наличие утеплителя
+2025-03-20 12:55:04,032 root         INFO     --Настрочить утеплитель
+2025-03-20 12:55:04,032 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 12:55:04,033 root         INFO     ----------<p>Полочка</p><p>-Стачивание</p><p>--С кокеткой</p><p>---Втачка</p><p>---Отделка</p><p>--С рельефом</p><p>---Втачка</p><p>---Отделка</p><p>-Наличие утеплителя</p><p>--Настрочить утеплитель</p><p>--Притачивание ветрозащитной ткани</p>
+2025-03-20 12:57:41,385 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 12:57:41,584 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 12:59:51,066 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 12:59:51,265 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:10:11,800 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 14:10:12,288 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:10:57,537 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 14:10:57,731 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:30:09,953 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:31:30,669 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:46:03,449 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: []}
+2025-03-20 14:46:03,456 root         INFO     Полочка
+2025-03-20 14:46:03,457 root         INFO     -Стачивание
+2025-03-20 14:46:03,457 root         INFO     --С рельефом
+2025-03-20 14:46:03,457 root         INFO     ---Втачка
+2025-03-20 14:46:03,457 root         INFO     ---Отделка
+2025-03-20 14:46:03,457 root         INFO     --С кокеткой
+2025-03-20 14:46:03,457 root         INFO     ---Притачать
+2025-03-20 14:46:03,457 root         INFO     ---Отделка
+2025-03-20 14:46:03,457 root         INFO     ----------<p>Полочка</p><p>-Стачивание</p><p>--С рельефом</p><p>---Втачка</p><p>---Отделка</p><p>--С кокеткой</p><p>---Притачать</p><p>---Отделка</p>
+2025-03-20 14:47:33,695 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 14:47:33,704 root         INFO     Полочка
+2025-03-20 14:47:33,705 root         INFO     -Стачивание
+2025-03-20 14:47:33,705 root         INFO     --С рельефом
+2025-03-20 14:47:33,705 root         INFO     ---Втачка
+2025-03-20 14:47:33,705 root         INFO     ---Отделка
+2025-03-20 14:47:33,705 root         INFO     --С кокеткой
+2025-03-20 14:47:33,705 root         INFO     ---Притачать
+2025-03-20 14:47:33,705 root         INFO     ---Отделка
+2025-03-20 14:47:33,705 root         INFO     -Наличие утеплителя
+2025-03-20 14:47:33,705 root         INFO     --Настрочить утеплитель
+2025-03-20 14:47:33,705 root         INFO     --Притачивание ветрозащитной ткани
+2025-03-20 14:47:33,705 root         INFO     ----------<p>Полочка</p><p>-Стачивание</p><p>--С рельефом</p><p>---Втачка</p><p>---Отделка</p><p>--С кокеткой</p><p>---Притачать</p><p>---Отделка</p><p>-Наличие утеплителя</p><p>--Настрочить утеплитель</p><p>--Притачивание ветрозащитной ткани</p>
+2025-03-20 14:47:51,636 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 14:47:51,848 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:47:52,445 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 14:47:52,454 root         INFO     Полочка
+2025-03-20 14:47:52,455 root         INFO     --Стачивание
+2025-03-20 14:47:52,455 root         INFO     ----С рельефом
+2025-03-20 14:47:52,455 root         INFO     ------Втачка
+2025-03-20 14:47:52,455 root         INFO     ------Отделка
+2025-03-20 14:47:52,455 root         INFO     ----С кокеткой
+2025-03-20 14:47:52,455 root         INFO     ------Притачать
+2025-03-20 14:47:52,455 root         INFO     ------Отделка
+2025-03-20 14:47:52,455 root         INFO     --Наличие утеплителя
+2025-03-20 14:47:52,455 root         INFO     ----Настрочить утеплитель
+2025-03-20 14:47:52,455 root         INFO     ----Притачивание ветрозащитной ткани
+2025-03-20 14:47:52,455 root         INFO     ----------<p>Полочка</p><p>--Стачивание</p><p>----С рельефом</p><p>------Втачка</p><p>------Отделка</p><p>----С кокеткой</p><p>------Притачать</p><p>------Отделка</p><p>--Наличие утеплителя</p><p>----Настрочить утеплитель</p><p>----Притачивание ветрозащитной ткани</p>
+2025-03-20 14:47:53,170 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 14:47:53,179 root         INFO     Полочка
+2025-03-20 14:47:53,179 root         INFO     --Стачивание
+2025-03-20 14:47:53,179 root         INFO     ----С рельефом
+2025-03-20 14:47:53,179 root         INFO     ------Втачка
+2025-03-20 14:47:53,179 root         INFO     ------Отделка
+2025-03-20 14:47:53,180 root         INFO     ----С кокеткой
+2025-03-20 14:47:53,180 root         INFO     ------Притачать
+2025-03-20 14:47:53,180 root         INFO     ------Отделка
+2025-03-20 14:47:53,180 root         INFO     --Наличие утеплителя
+2025-03-20 14:47:53,180 root         INFO     ----Настрочить утеплитель
+2025-03-20 14:47:53,180 root         INFO     ----Притачивание ветрозащитной ткани
+2025-03-20 14:47:53,180 root         INFO     ----------<p>Полочка</p><p>--Стачивание</p><p>----С рельефом</p><p>------Втачка</p><p>------Отделка</p><p>----С кокеткой</p><p>------Притачать</p><p>------Отделка</p><p>--Наличие утеплителя</p><p>----Настрочить утеплитель</p><p>----Притачивание ветрозащитной ткани</p>
+2025-03-20 14:48:13,035 django.utils.autoreload INFO     /app/configurator/utils/graph.py changed, reloading.
+2025-03-20 14:48:13,239 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:48:13,793 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 14:48:13,803 root         INFO     Полочка
+2025-03-20 14:48:13,804 root         INFO     --Стачивание
+2025-03-20 14:48:13,804 root         INFO     ----С рельефом
+2025-03-20 14:48:13,804 root         INFO     ------Втачка
+2025-03-20 14:48:13,804 root         INFO     ------Отделка
+2025-03-20 14:48:13,804 root         INFO     ----С кокеткой
+2025-03-20 14:48:13,804 root         INFO     ------Притачать
+2025-03-20 14:48:13,804 root         INFO     ------Отделка
+2025-03-20 14:48:13,804 root         INFO     --Наличие утеплителя
+2025-03-20 14:48:13,804 root         INFO     ----Настрочить утеплитель
+2025-03-20 14:48:13,804 root         INFO     ----Притачивание ветрозащитной ткани
+2025-03-20 14:48:13,804 root         INFO     ----------<p>*Полочка</p><p>*--Стачивание</p><p>*----С рельефом</p><p>*------Втачка</p><p>*------Отделка</p><p>*----С кокеткой</p><p>*------Притачать</p><p>*------Отделка</p><p>*--Наличие утеплителя</p><p>*----Настрочить утеплитель</p><p>*----Притачивание ветрозащитной ткани</p>
+2025-03-20 14:48:14,537 root         INFO     {<Item: Изделие Полочка от Куртка>: [<Item: Изделие Стачивание от Куртка>, <Item: Изделие Наличие утеплителя от Куртка>], <Item: Изделие Стачивание от Куртка>: [<Item: Изделие С рельефом от Куртка>, <Item: Изделие С кокеткой от Куртка>], <Item: Изделие С рельефом от Куртка>: [<Item: Изделие Втачка от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие С кокеткой от Куртка>: [<Item: Изделие Притачать от Куртка>, <Item: Изделие Отделка от Куртка>], <Item: Изделие Втачка от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Притачать от Куртка>: [], <Item: Изделие Отделка от Куртка>: [], <Item: Изделие Наличие утеплителя от Куртка>: [<Item: Изделие Настрочить утеплитель от Куртка>, <Item: Изделие Притачивание ветрозащитной ткани от Куртка>], <Item: Изделие Настрочить утеплитель от Куртка>: [], <Item: Изделие Притачивание ветрозащитной ткани от Куртка>: []}
+2025-03-20 14:48:14,547 root         INFO     Полочка
+2025-03-20 14:48:14,547 root         INFO     --Стачивание
+2025-03-20 14:48:14,547 root         INFO     ----С рельефом
+2025-03-20 14:48:14,547 root         INFO     ------Втачка
+2025-03-20 14:48:14,547 root         INFO     ------Отделка
+2025-03-20 14:48:14,547 root         INFO     ----С кокеткой
+2025-03-20 14:48:14,547 root         INFO     ------Притачать
+2025-03-20 14:48:14,547 root         INFO     ------Отделка
+2025-03-20 14:48:14,547 root         INFO     --Наличие утеплителя
+2025-03-20 14:48:14,547 root         INFO     ----Настрочить утеплитель
+2025-03-20 14:48:14,547 root         INFO     ----Притачивание ветрозащитной ткани
+2025-03-20 14:48:14,547 root         INFO     ----------<p>*Полочка</p><p>*--Стачивание</p><p>*----С рельефом</p><p>*------Втачка</p><p>*------Отделка</p><p>*----С кокеткой</p><p>*------Притачать</p><p>*------Отделка</p><p>*--Наличие утеплителя</p><p>*----Настрочить утеплитель</p><p>*----Притачивание ветрозащитной ткани</p>
+2025-03-20 15:06:33,781 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 15:06:34,000 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:07:38,254 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 15:07:38,464 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:08:38,696 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 15:08:38,907 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:09:18,068 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 15:09:18,259 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:09:29,340 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 15:09:29,555 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:10:00,697 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 15:10:00,914 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:48:22,740 django.utils.autoreload INFO     /app/configurator/views.py changed, reloading.
+2025-03-20 17:48:23,072 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:51:46,907 django.utils.autoreload INFO     /app/configurator/models.py changed, reloading.
+2025-03-20 17:51:47,111 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:52:43,386 django.utils.autoreload INFO     /app/cpq/settings.py changed, reloading.
+2025-03-20 17:52:43,555 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:53:44,641 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:54:04,919 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:54:32,907 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:56:46,544 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 17:58:11,456 django.utils.autoreload INFO     /app/configurator/admin.py changed, reloading.
+2025-03-20 17:58:11,895 django.utils.autoreload INFO     Watching for file changes with StatReloader

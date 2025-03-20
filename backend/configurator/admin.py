@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Item, Element, Resource, Attribute, Condition
+from .models import Product, Item, Resource, Attribute, Condition, ConditionItem
 
 # Register your models here.
 
@@ -10,11 +10,6 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(Element)
-class ElementAdmin(admin.ModelAdmin):
     pass
 
 
@@ -30,4 +25,9 @@ class AttributeAdmin(admin.ModelAdmin):
 
 @admin.register(Condition)
 class ConditionAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(ConditionItem)
+class ConditionItemAdmin(admin.ModelAdmin):
     pass

@@ -1,5 +1,5 @@
 from django.db import models
-
+from .utils.choices import Operator, Operation
 
 # Товар
 class Product(models.Model):
@@ -19,48 +19,53 @@ class Item(models.Model):
                                blank=True, null=True, verbose_name='Родительская группа')
     uniq = models.BooleanField(default=False, verbose_name="Уникальная группа")
     required = models.BooleanField(default=False, verbose_name="Обязательно")
-    min_count = models.IntegerField(verbose_name="Минимальное количество")
-    max_count = models.IntegerField(verbose_name="Максимальное количество")
+    min_count = models.IntegerField(default=1, verbose_name="Минимальное количество")
+    max_count = models.IntegerField(default=1, verbose_name="Максимальное количество")
 
     def __str__(self):
         return f"Изделие {self.name} от {self.product.name}"
 
-# Элемент
-class Element(models.Model):
-    name = models.CharField(max_length=255, verbose_name='Название')
-    value = models.BooleanField(verbose_name="Значение")
-    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="elements",
-                             verbose_name="Изделие")
-
-    def __str__(self):
-        return f"Элемент {self.name} от {self.item.name}"
 
 # Ресурс
 class Resource(models.Model):
-    element = models.ForeignKey(Element, on_delete=models.CASCADE, verbose_name='Изделие')
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="resources",
+                             verbose_name='Изделие')
 
     def __str__(self):
-        return f"Ресурс {self.element.name}"
+        return f"Ресурс {self.item.name}"
 
 # Набор признаков
 class Attribute(models.Model):
     name = models.CharField(max_length=255, verbose_name='Название')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name="Товар")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="attributes",
+                                verbose_name="Товар")
+    attribute_for = models.ManyToManyField(Item, related_name='attributes',
+                                           verbose_name="Признак для")
+    operation = models.CharField(max_length=100, choices=Operation.choices, verbose_name="Операция")
+
 
     def __str__(self):
         return f"Признак {self.name} от {self.product.name}"
 
 # Набор условий
 class Condition(models.Model):
-    name = models.CharField(max_length=255, verbose_name='Название')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name="Товар")
-    attribute = models.ForeignKey(Attribute, on_delete=models.CASCADE, related_name="attributes",
-                                  blank=True, null=True, verbose_name="Аттрибут")
-    item_to_condition = models.ForeignKey(Item, on_delete=models.CASCADE,
-                                          blank=True, null=True, verbose_name="Элемент условия")
-    item_to_change = models.ForeignKey(Item, on_delete=models.CASCADE,
-                                       blank=True, null=True, verbose_name="Изменяемый элемент")
-    condition = models.CharField(max_length=255, verbose_name="Условие")
+    name = models.CharField(max_length=255, verbose_name="Наименование")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="conditions",
+                                verbose_name="Товар")
+    condition_for = models.ManyToManyField(Item, related_name='conditions',
+                                      verbose_name="Условие для")
+    operation = models.CharField(max_length=100, choices=Operation.choices, verbose_name="Операция")
+    operator = models.CharField(max_length=100, choices=Operator.choices, verbose_name="Оператор")
 
     def __str__(self):
         return f"Условие {self.name} от {self.product.name}"
+
+class ConditionItem(models.Model):
+    condition = models.ForeignKey(Condition, on_delete=models.CASCADE, related_name="condition_items",
+                                  verbose_name="Условие")
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="condition_items",
+                             verbose_name="Элемент")
+    value = models.BooleanField(verbose_name="Значение")
+
+    def __str__(self):
+        return f"Элемент условия для {self.item}"
