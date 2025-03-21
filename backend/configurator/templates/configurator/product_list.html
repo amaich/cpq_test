@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if products %}
+        {% for product in products%}
+            <p><a href="{% url 'configurator:product_graph' product.id %}">{{ product.name }}</a></p>
+        {% endfor %}
+    {% else %}
+    <p>No products</p>
+    {% endif %}
+</body>
+</html>

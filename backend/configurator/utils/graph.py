@@ -40,7 +40,6 @@ class ItemGraph:
         result = f"<p>{'*' + '--' * level + start.name}</p>"
         logging.info('--' * level + start.name)
         for daughter in self.nodes[start]:
-
             if daughter not in visited:
                 result += self.pretty_dfs(daughter, visited, level + 1)
 

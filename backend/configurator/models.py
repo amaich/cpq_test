@@ -43,7 +43,6 @@ class Attribute(models.Model):
                                            verbose_name="Признак для")
     operation = models.CharField(max_length=100, choices=Operation.choices, verbose_name="Операция")
 
-
     def __str__(self):
         return f"Признак {self.name} от {self.product.name}"
 
@@ -53,7 +52,7 @@ class Condition(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="conditions",
                                 verbose_name="Товар")
     condition_for = models.ManyToManyField(Item, related_name='conditions',
-                                      verbose_name="Условие для")
+                                           verbose_name="Условие для")
     operation = models.CharField(max_length=100, choices=Operation.choices, verbose_name="Операция")
     operator = models.CharField(max_length=100, choices=Operator.choices, verbose_name="Оператор")
 

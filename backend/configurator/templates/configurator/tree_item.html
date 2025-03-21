@@ -1,0 +1,16 @@
+<p>
+    {% if level == 0 %}
+        *{{ item.name }}
+    {% else %}
+        {% with ''|center:level as range %}
+            {% for _ in range %}--{% endfor %}{{ item.name }} {% if item.attribute %} - {{ item.attribute }} {% endif %}
+        {% endwith %}
+    {% endif %}
+</p>
+<p>
+{% if item.children %}
+      {% for child in item.children %}
+          {% include "configurator/tree_item.html" with item=child level=level|add:1 %}
+      {% endfor %}
+{% endif %}
+</p>

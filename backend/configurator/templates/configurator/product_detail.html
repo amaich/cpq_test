@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for attribute in available_attributes %}
+        <p><a href="{% url 'configurator:product_graph' product_id attribute.id %}">{{ attribute.name }}</a></p>
+    {% endfor %}
+    <form method="get" action="">
+        {% for attribute in available_attributes %}
+            <label>
+                <input type="checkbox" name="view_type" value="{{ attribute.id }}"> {{ attribute.name }}
+            </label><br>
+        {% endfor %}
+        <button type="submit">Apply</button>
+    </form>
+    {% for item in data %}
+        {% include "configurator/tree_item.html" with item=item level=0 %}
+    {% endfor %}
+    <form method="get" action="">
+        <button type="submit">Reset</button>
+    </form>
+</body>
+</html>
